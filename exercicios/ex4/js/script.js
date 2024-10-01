@@ -1,16 +1,24 @@
-// crie dois inputs de tipo numero que ao clicar no botão somar, informe no alert os valores somados 
+function mostrarDia() {
+    let numero = parseInt(document.getElementById('numero').value);
+    let dia;
 
-function somar () {
-    let numero1 = document.querySelector('.num1').value;
-    let numero2 = document.querySelector('.num2').value;
+    if (numero === 1) {
+        dia = "Dia: Domingo";
+    } else if (numero === 2) {
+        dia = "Dia: Segunda-feira";
+    } else if (numero === 3) {
+        dia = "Dia: Terça-feira";
+    } else if (numero === 4) {
+        dia = "Dia: Quarta-feira";
+    } else if (numero === 5) {
+        dia = "Dia: Quinta-feira";
+    } else if (numero === 6) {
+        dia = "Dia: Sexta-feira";
+    } else if (numero === 7) {
+        dia = "Dia: Sábado";
+    } else {
+        dia = "Número inválido. Por favor, digite um número de 1 a 7.";
+    }
 
-    numero1 = parseInt(numero1);
-    numero2 = parseInt(numero2);
-    let soma = numero1 + numero2;
-
-    pResutado = document.querySelector("#resultado");
-    pResutado.innerHTML = `${numero1} + ${numero2} = ${soma}`;
-
+    document.getElementById('resultado').innerText = dia;
 }
-let botao = document.querySelector("button");
-botao.addEventListener("click", somar);

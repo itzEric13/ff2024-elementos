@@ -1,16 +1,33 @@
-// crie dois inputs de tipo numero que ao clicar no botão somar, informe no alert os valores somados 
-
-function somar () {
-    let numero1 = document.querySelector('.num1').value;
-    let numero2 = document.querySelector('.num2').value;
-
-    numero1 = parseInt(numero1);
-    numero2 = parseInt(numero2);
-    let soma = numero1 + numero2;
-
-    pResutado = document.querySelector("#resultado");
-    pResutado.innerHTML = `${numero1} + ${numero2} = ${soma}`;
-
-}
-let botao = document.querySelector("button");
-botao.addEventListener("click", somar);
+let num1 = parseFloat(prompt("Digite o primeiro número:"));
+        let num2 = parseFloat(prompt("Digite o segundo número:"));
+        let num3 = parseFloat(prompt("Digite o terceiro número:"));
+   
+        let maior;
+        let menor;
+ 
+        // Verifica se todos os números são iguais
+        if (num1 === num2 && num2 === num3) {
+            maior = "Todos os números são iguais.";
+            menor = "Todos os números são iguais.";
+        } else {}
+ 
+            // Determina o maior número
+            if (num1 >= num2 && num1 >= num3) {
+                maior = num1;
+            } else if (num2 >= num1 && num2 >= num3) {
+                maior = num2;
+            } else {
+                maior = num3;
+            }
+ 
+            // Determina o menor número
+            if (num1 <= num2 && num1 <= num3) {
+                menor = num1;
+            } else if (num2 <= num1 && num2 <= num3) {
+                menor = num2;
+            } else {
+                menor = num3;
+            }
+       
+ 
+        document.getElementById('resultado').innerText = `O maior é: ${maior} e o menor é: ${menor}`;
