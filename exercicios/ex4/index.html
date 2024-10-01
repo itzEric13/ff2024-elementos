@@ -1,18 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex 2</title>
-    <link rel="stylesheet" href="/css/estilo.css">
+    <title>Dia da Semana</title>
 </head>
 <body>
-    <input type="number" class="num1">
-    <input type="number" class="num2">
-    <button type="button">Somar</button>
-
-    <p id="resultado"> </p>
-    <script src="js/script.js"></script>
+    <h1>Digite um número de 1 a 7 para retornar um dia da Semana</h1>
+    <input type="number" id="numero" min="1" max="7">
+    <button onclick="mostrarDia()">Mostrar Dia</button>
+ 
+    <h2 id="resultado"></h2>
+ 
+    <script>
+        function mostrarDia() {
+            let numero = parseInt(document.getElementById('numero').value);
+            let dia;
+ 
+            if (numero === 1) {
+                dia = "Dia: Domingo";
+            } else if (numero === 2) {
+                dia = "Dia: Segunda-feira";
+            } else if (numero === 3) {
+                dia = "Dia: Terça-feira";
+            } else if (numero === 4) {
+                dia = "Dia: Quarta-feira";
+            } else if (numero === 5) {
+                dia = "Dia: Quinta-feira";
+            } else if (numero === 6) {
+                dia = "Dia: Sexta-feira";
+            } else if (numero === 7) {
+                dia = "Dia: Sábado";
+            } else {
+                dia = "Número inválido. Por favor, digite um número de 1 a 7.";
+            }
+ 
+            document.getElementById('resultado').innerText = dia;
+        }
+    </script>
 </body>
-
-</html>
+</html>                 

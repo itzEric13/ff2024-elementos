@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário</title>
+</head>
+<body>
+    <h1> Controle de funcionários. </h1>
+    <script>
+        let nome = (prompt("Digite o seu nome:"));
+        let salarioHora = parseFloat(prompt("Qual é o seu salário por hora ? "));
+        let horaTrabalhada = parseFloat(prompt("Quantas horas você trabalha por mês ?"));
+ 
+        let salario = salarioHora*horaTrabalhada;
+   
+       
+ 
+    document.write("<br> <b>Nome: "+nome);
+    document.write("<br><b>Salário por hora: "+salarioHora);
+    document.write("<br><b>Horas trabalhadas no mês: "+horaTrabalhada);    
+    document.write("<br><b>Salário mensal:" +salario);
+ 
+    </script>
+   
+</body>
+</html>

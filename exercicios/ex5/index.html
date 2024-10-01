@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex 2</title>
-    <link rel="stylesheet" href="/css/estilo.css">
+    <title>Ex5</title>
 </head>
 <body>
-    <input type="number" class="num1">
-    <input type="number" class="num2">
-    <button type="button">Somar</button>
-
-    <p id="resultado"> </p>
-    <script src="js/script.js"></script>
+    <h2 id="resultado"></h2>
+    <script>
+       let num1 = parseFloat(prompt("Digite um número"));
+       let num2 = parseFloat(prompt("Digite um número"));
+   
+       let maior ;
+       
+       if (num1>num2) {
+        maior =  num1 ;
+       }
+       else if  (num2>num1){
+        maior =  num2 ;
+       }
+ 
+       else {
+        maior = "Os número são iguais."
+       }
+ 
+       document.getElementById('resultado').innerText = `O maior número é: ${maior}`;
+    </script>
+ 
 </body>
-
 </html>
